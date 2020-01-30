@@ -40,11 +40,8 @@ class CalcController {
   pasteFromClipboard() {
 
       document.addEventListener('paste', e => {
-
           let text = e.clipboardData.getData('Text');
-
           this.displayCalc = parseFloat(text);
-
       });
 
   }
@@ -54,9 +51,7 @@ class CalcController {
       this.setDisplayDateTime();
 
       setInterval(() => {
-
           this.setDisplayDateTime();
-
       }, 1000);
 
       this.setLastNumberToDisplay();
@@ -416,9 +411,7 @@ class CalcController {
   }
 
   get displayCalc() {
-
       return this._displayCalcEl.innerHTML;
-
   }
 
   set displayCalc(value) {
